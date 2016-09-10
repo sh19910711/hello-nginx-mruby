@@ -8,5 +8,5 @@ install:
 
 script:
   - docker-compose up -d
-  - sleep 30
-  - curl http://localhost:8080/hello | grep hello
+  - sleep 3
+  - curl http://localhost:8080/hello | grep Hello
