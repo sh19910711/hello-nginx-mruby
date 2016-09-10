@@ -1,0 +1,12 @@
+language: bash
+sudo: required
+services:
+  - docker
+
+install:
+  - docker-compose build
+
+script:
+  - docker-compose up -d
+  - sleep 30
+  - curl http://localhost:8080/hello | grep hello
